@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEO3TECH | Engenharia Aplicada à Segurança — CFTV, Controle de Acesso e Redes em Salvador/BA</title>
+  <meta name="description" content="Soluções em segurança com precisão, inteligência e alta performance. CFTV, controle de acesso, automação e infraestrutura de redes para condomínios e empresas em Salvador e Região Metropolitana.">
+  <meta name="keywords" content="CFTV Salvador, controle de acesso condomínio, câmeras de segurança, automação portões, cabeamento estruturado, GEO3TECH">
+  <meta name="author" content="GEO3TECH">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.geo3tech.com.br/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="GEO3TECH">
+  <meta property="og:title" content="GEO3TECH | Engenharia Aplicada à Segurança">
+  <meta property="og:description" content="CFTV, controle de acesso, automação e redes de alta performance para condomínios e empresas em Salvador e RMS.">
+  <meta property="og:image" content="https://www.geo3tech.com.br/assets/img/og-cover.jpg">
+  <meta property="og:url" content="https://www.geo3tech.com.br/">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GEO3TECH | Engenharia Aplicada à Segurança">
+  <meta name="twitter:description" content="CFTV, controle de acesso, automação e redes de alta performance para condomínios e empresas em Salvador e RMS.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230F172A'/%3E%3Cpath d='M50 20 L78 35 L78 65 L50 80 L22 65 L22 35 Z' fill='none' stroke='%2338BDF8' stroke-width='5'/%3E%3Ccircle cx='50' cy='50' r='9' fill='%2338BDF8'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <!-- Tema (evita flash de tema errado ao carregar) -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('geo3tech-theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "GEO3TECH",
+    "image": "https://www.geo3tech.com.br/assets/img/og-cover.jpg",
+    "telephone": "+55-71-98198-5781",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Luís Viana Filho, 1831 — Shopping Amazônia, Loja 13, Av. Paralela",
+      "addressLocality": "Salvador",
+      "addressRegion": "BA",
+      "postalCode": "41730-101",
+      "addressCountry": "BR"
+    },
+    "areaServed": "Salvador e Região Metropolitana",
+    "taxID": "39.821.330/0001-83"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="GEO3TECH — Início">
+        <span class="logo__mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="34" height="34">
+            <polygon points="20,4 35,12.5 35,27.5 20,36 5,27.5 5,12.5" fill="none" stroke="currentColor" stroke-width="2.4"/>
+            <circle cx="20" cy="20" r="4.2" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="logo__text">GEO<b>3</b>TECH</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <a href="#top" class="nav__link">Início</a>
+        <a href="#diferenciais" class="nav__link">Diferenciais</a>
+        <a href="#servicos" class="nav__link">Serviços</a>
+        <a href="#parceria" class="nav__link">Parceria</a>
+        <a href="#cases" class="nav__link">Cases</a>
+        <a href="#sobre" class="nav__link">Sobre</a>
+        <a href="#contato" class="nav__link">Contato</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+          <i data-lucide="sun" class="theme-toggle__icon theme-toggle__icon--sun"></i>
+          <i data-lucide="moon" class="theme-toggle__icon theme-toggle__icon--moon"></i>
+        </button>
+        <a href="https://wa.me/5571981985781" target="_blank" rel="noopener" class="btn btn--primary btn--sm">
+          <i data-lucide="message-circle"></i> <span>Fale no WhatsApp</span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content" data-reveal>
+          <span class="eyebrow"><i data-lucide="shield-check"></i> — ENGENHARIA APLICADA À SEGURANÇA</span>
+          <h1 class="hero__title">Soluções em segurança com <span class="text-accent">precisão</span>, inteligência e alta performance.</h1>
+          <p class="hero__subtitle">Tecnologia avançada em CFTV, controle de acesso e redes para condomínios e empresas em Salvador e RMS.</p>
+          <div class="hero__ctas">
+            <a href="https://wa.me/5571981985781" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+              <i data-lucide="phone-call"></i> Falar com especialista
+            </a>
+            <a href="#servicos" class="btn btn--ghost btn--lg">
+              Conhecer serviços <i data-lucide="arrow-down-right"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="hero__visual" data-reveal data-reveal-delay="150">
+          <div class="orbit">
+            <svg class="orbit__lines" viewBox="0 0 460 460" aria-hidden="true">
+              <circle cx="230" cy="230" r="150" class="orbit__ring"/>
+              <circle cx="230" cy="230" r="150" class="orbit__ring orbit__ring--dash"/>
+            </svg>
+
+            <div class="orbit__core">
+              <i data-lucide="shield-check"></i>
+              <span>GEO3TECH</span>
+            </div>
+
+            <div class="orbit__node orbit__node--cam" style="--angle:-90deg">
+              <i data-lucide="camera"></i><span>CFTV 24h</span>
+            </div>
+            <div class="orbit__node orbit__node--access" style="--angle:30deg">
+              <i data-lucide="fingerprint"></i><span>Acesso biométrico</span>
+            </div>
+            <div class="orbit__node orbit__node--net" style="--angle:150deg">
+              <i data-lucide="network"></i><span>Rede 99.9%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MÉTRICAS / BENTO ============ -->
+    <section class="metrics">
+      <div class="container">
+        <div class="bento" data-reveal>
+          <div class="bento__item">
+            <span class="bento__num">5<small>+</small></span>
+            <p>Anos de mercado e experiência</p>
+          </div>
+          <div class="bento__item">
+            <span class="bento__num">100<small>+</small></span>
+            <p>Clientes ativos e projetos concluídos</p>
+          </div>
+          <div class="bento__item">
+            <span class="bento__num">98<small>%</small></span>
+            <p>Taxa de satisfação dos clientes</p>
+          </div>
+          <div class="bento__item">
+            <span class="bento__num">100<small>%</small></span>
+            <p>Projetos sob medida & equipe certificada</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DIFERENCIAIS ============ -->
+    <section class="section" id="diferenciais">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="eyebrow">— NOSSOS DIFERENCIAIS</span>
+          <h2>Por que condomínios e empresas confiam na GEO3TECH</h2>
+        </div>
+
+        <div class="cards-grid cards-grid--4" data-reveal>
+          <div class="card">
+            <div class="card__icon"><i data-lucide="ruler"></i></div>
+            <h3>Projetos personalizados</h3>
+            <p>Cada solução é desenhada sob medida para a planta e a rotina do seu condomínio ou empresa.</p>
+          </div>
+          <div class="card">
+            <div class="card__icon"><i data-lucide="badge-check"></i></div>
+            <h3>Equipe técnica certificada</h3>
+            <p>Instalação e manutenção conduzidas por profissionais qualificados e atualizados nas normas do setor.</p>
+          </div>
+          <div class="card">
+            <div class="card__icon"><i data-lucide="timer"></i></div>
+            <h3>Atendimento ágil e local</h3>
+            <p>Presença em Salvador e RMS garante suporte rápido, sem depender de equipes de fora.</p>
+          </div>
+          <div class="card">
+            <div class="card__icon"><i data-lucide="building-2"></i></div>
+            <h3>Especialistas em segurança condominial e corporativa</h3>
+            <p>Experiência real em condomínios residenciais e ambientes corporativos de diferentes portes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVIÇOS ============ -->
+    <section class="section section--muted" id="servicos">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="eyebrow">— NOSSOS SERVIÇOS</span>
+          <h2>Tecnologia de ponta em cada camada da sua segurança</h2>
+        </div>
+
+        <div class="cards-grid cards-grid--3" data-reveal>
+          <article class="card card--service">
+            <div class="card__icon card__icon--accent"><i data-lucide="camera"></i></div>
+            <h3>CFTV & Monitoramento Inteligente</h3>
+            <p>Câmeras de alta tecnologia e vigilância contínua, com análise inteligente de imagens em tempo real.</p>
+          </article>
+          <article class="card card--service">
+            <div class="card__icon card__icon--accent"><i data-lucide="fingerprint"></i></div>
+            <h3>Controle de Acesso</h3>
+            <p>Biometria, reconhecimento facial, catracas e gestão condominial integrada em um único sistema.</p>
+          </article>
+          <article class="card card--service">
+            <div class="card__icon card__icon--accent"><i data-lucide="door-open"></i></div>
+            <h3>Automação de Ambientes e Portões</h3>
+            <p>Controle de iluminação, acessos rápidos e segurança automatizada para maior conforto e proteção.</p>
+          </article>
+          <article class="card card--service">
+            <div class="card__icon card__icon--accent"><i data-lucide="network"></i></div>
+            <h3>Infraestrutura de Redes</h3>
+            <p>Cabeamento estruturado corporativo de alta performance, projetado para crescer com o seu negócio.</p>
+          </article>
+          <article class="card card--service">
+            <div class="card__icon card__icon--accent"><i data-lucide="phone"></i></div>
+            <h3>Interfonia Integrada</h3>
+            <p>Sistemas analógicos e VoIP para uma comunicação interna eficiente entre moradores, portaria e administração.</p>
+          </article>
+          <article class="card card--service card--cta-inline">
+            <div class="card__icon card__icon--dark"><i data-lucide="message-square-text"></i></div>
+            <h3>Não sabe por onde começar?</h3>
+            <p>Fale com um especialista e receba um diagnóstico gratuito para o seu projeto.</p>
+            <a href="https://wa.me/5571981985781" target="_blank" rel="noopener" class="link-arrow">Solicitar orçamento <i data-lucide="arrow-up-right"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PARCERIA CONDFY ============ -->
+    <section class="section partner" id="parceria">
+      <div class="container partner__inner">
+        <div class="partner__badge" data-reveal>
+          <div class="partner__logos">
+            <span class="partner__logo partner__logo--geo">GEO<b>3</b>TECH</span>
+            <i data-lucide="plus" class="partner__plus" aria-hidden="true"></i>
+            <img src="assets/img/condfy-logo.svg" alt="Condfy" class="partner__logo-img">
+          </div>
+        </div>
+
+        <div class="partner__content" data-reveal data-reveal-delay="100">
+          <span class="eyebrow">— PARCERIA ESTRATÉGICA</span>
+          <h2>GEO3TECH agora integrada à plataforma Condfy</h2>
+          <p>Unimos nossa engenharia de segurança eletrônica à gestão condominial da Condfy, conectando câmeras, controle de acesso e comunicação em um único ecossistema digital para síndicos, porteiros e moradores.</p>
+          <ul class="partner__list">
+            <li><i data-lucide="check-circle-2"></i> Gestão unificada de acessos e ocorrências</li>
+            <li><i data-lucide="check-circle-2"></i> Comunicação direta com moradores pelo app</li>
+            <li><i data-lucide="check-circle-2"></i> Relatórios e histórico centralizados</li>
+          </ul>
+          <a href="https://wa.me/5571981985781" target="_blank" rel="noopener" class="btn btn--primary">
+            Saiba mais sobre a integração <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE ============ -->
+    <section class="section" id="sobre">
+      <div class="container about">
+        <div class="about__visual" data-reveal>
+          <div class="panel panel--about">
+            <div class="panel__topbar"><span class="dot dot--accent"></span> STATUS DO SISTEMA</div>
+            <ul class="status-list">
+              <li><span>Câmeras online</span><b>128/128</b></li>
+              <li><span>Controle de acesso</span><b>Operacional</b></li>
+              <li><span>Rede corporativa</span><b>99.9% uptime</b></li>
+              <li><span>Monitoramento 24h</span><b>Ativo</b></li>
+            </ul>
+          </div>
+        </div>
+        <div class="about__content" data-reveal data-reveal-delay="100">
+          <span class="eyebrow">— SOBRE A GEO3TECH</span>
+          <h2>Engenharia de segurança pensada para a realidade de Salvador</h2>
+          <p>A GEO3TECH nasceu para levar engenharia de verdade à segurança eletrônica de condomínios e empresas de Salvador e Região Metropolitana. Unimos tecnologia de ponta a um atendimento próximo, ágil e técnico, do diagnóstico à manutenção contínua.</p>
+          <p>Nosso time certificado projeta cada sistema — de CFTV a redes estruturadas — sob medida, com foco em confiabilidade, escalabilidade e resposta rápida quando o cliente mais precisa.</p>
+          <a href="#contato" class="btn btn--primary">Conhecer nossa proposta <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CASES ============ -->
+    <section class="section section--muted" id="cases">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="eyebrow">— PROJETOS ENTREGUES</span>
+          <h2>Cases reais de segurança em condomínios de Salvador e RMS</h2>
+        </div>
+
+        <div class="case-grid" data-reveal>
+          <article class="case-card case-card--featured">
+            <div class="case-card__media">
+              <img src="assets/img/projects/villaggio-1.svg" alt="CFTV instalado no Condomínio Villaggio Panamby" class="case-card__slide">
+              <img src="assets/img/projects/villaggio-2.svg" alt="Controle de acesso no Condomínio Villaggio Panamby" class="case-card__slide">
+              <img src="assets/img/projects/villaggio-3.svg" alt="Automação de portões no Condomínio Villaggio Panamby" class="case-card__slide">
+            </div>
+            <div class="case-card__body">
+              <span class="case-card__tag">Condomínio Villaggio Panamby</span>
+              <h3>Segurança completa para um condomínio de grande porte</h3>
+              <p>Projeto de ponta a ponta cobrindo monitoramento, controle de acesso e automação de portões, dimensionado para um condomínio de grande porte.</p>
+              <ul class="case-card__stats">
+                <li><i data-lucide="camera"></i> <span><strong>+600</strong> câmeras distribuídas</span></li>
+                <li><i data-lucide="fingerprint"></i> <span>Controle de acesso para <strong>372 unidades</strong> com reconhecimento facial</span></li>
+                <li><i data-lucide="door-open"></i> <span>Automação de portões</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <div class="case-card__media">
+              <img src="assets/img/projects/solar-1.svg" alt="CFTV instalado no Condomínio Solar da Praia" class="case-card__slide">
+              <img src="assets/img/projects/solar-2.svg" alt="Portaria remota no Condomínio Solar da Praia" class="case-card__slide">
+            </div>
+            <div class="case-card__body">
+              <span class="case-card__tag">Condomínio Solar da Praia</span>
+              <h3>Modernização do sistema de monitoramento</h3>
+              <p>Substituição completa do parque de câmeras e implantação de portaria remota, sem transtorno para a rotina dos moradores.</p>
+              <ul class="case-card__stats">
+                <li><i data-lucide="camera"></i> <span>Modernização completa do CFTV</span></li>
+                <li><i data-lucide="phone-call"></i> <span>Portaria remota integrada</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <div class="case-card__media">
+              <img src="assets/img/projects/vidabela-1.svg" alt="Controle de acesso no Condomínio Vida Bela 2" class="case-card__slide">
+              <img src="assets/img/projects/vidabela-2.svg" alt="Reconhecimento facial no Condomínio Vida Bela 2" class="case-card__slide">
+            </div>
+            <div class="case-card__body">
+              <span class="case-card__tag">Condomínio Vida Bela 2</span>
+              <h3>Controle de acesso por biometria</h3>
+              <p>Implantação de controle de acesso biométrico com reconhecimento facial, resolvendo o controle de visitantes na portaria.</p>
+              <ul class="case-card__stats">
+                <li><i data-lucide="fingerprint"></i> <span>Controle de acesso biométrico</span></li>
+                <li><i data-lucide="scan-face"></i> <span>Reconhecimento facial</span></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DEPOIMENTOS ============ -->
+    <section class="section" id="depoimentos">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="eyebrow">— DEPOIMENTOS</span>
+          <h2>Quem confia na GEO3TECH, recomenda</h2>
+        </div>
+
+        <div class="cards-grid cards-grid--3" data-reveal>
+          <article class="card card--testimonial">
+            <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <p>"A troca do nosso sistema de câmeras foi rápida e sem transtorno para os moradores. Hoje temos muito mais tranquilidade na portaria."</p>
+            <div class="testimonial__author">
+              <strong>Condomínio Solar da Praia</strong>
+              <span>Salvador/BA</span>
+            </div>
+          </article>
+          <article class="card card--testimonial">
+            <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <p>"O controle de acesso por biometria resolveu um problema antigo de controle de visitantes. Suporte sempre muito ágil quando precisamos."</p>
+            <div class="testimonial__author">
+              <strong>Condomínio Vida Bela 2</strong>
+              <span>Lauro de Freitas/BA</span>
+            </div>
+          </article>
+          <article class="card card--testimonial">
+            <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <p>"Projeto de infraestrutura de rede e interfonia entregue no prazo, com equipe técnica muito atenciosa em todas as etapas."</p>
+            <div class="testimonial__author">
+              <strong>Condomínio Villaggio Panamby</strong>
+              <span>Salvador/BA</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section class="section" id="contato">
+      <div class="container contact">
+        <div class="contact__info" data-reveal>
+          <span class="eyebrow">— FALE COM A GENTE</span>
+          <h2>Vamos planejar a segurança do seu condomínio ou empresa</h2>
+          <p>Preencha o formulário ou entre em contato pelos canais abaixo. Nossa equipe responde rapidamente para agendar uma visita técnica.</p>
+
+          <ul class="contact-list">
+            <li>
+              <i data-lucide="phone-call"></i>
+              <div><span>Telefone / WhatsApp</span><a href="https://wa.me/5571981985781">(71) 98198-5781</a></div>
+            </li>
+            <li>
+              <i data-lucide="map-pin"></i>
+              <div>
+                <span>Endereço</span>
+                <p>Av. Luís Viana Filho, 1831 — Shopping Amazônia, Loja 13, Av. Paralela, Salvador/BA — CEP 41730-101</p>
+              </div>
+            </li>
+            <li>
+              <i data-lucide="map"></i>
+              <div><span>Área de atuação</span><p>Salvador e Região Metropolitana</p></div>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contactForm" data-reveal data-reveal-delay="100" action="https://formspree.io/f/SEU_CODIGO_AQUI" method="POST" novalidate>
+          <h3>Solicitar orçamento</h3>
+
+          <div class="field">
+            <label for="name">Nome completo</label>
+            <input type="text" id="name" name="name" placeholder="Seu nome" required>
+          </div>
+
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="voce@email.com" required>
+          </div>
+
+          <div class="field">
+            <label for="phone">Telefone / WhatsApp</label>
+            <input type="tel" id="phone" name="phone" placeholder="(71) 90000-0000" required>
+          </div>
+
+          <div class="field">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" rows="4" placeholder="Conte um pouco sobre o seu projeto..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block">
+            Enviar mensagem <i data-lucide="send"></i>
+          </button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="logo__text logo__text--footer">GEO<b>3</b>TECH</span>
+        <p>Engenharia aplicada à segurança. CFTV, controle de acesso, automação e redes em Salvador e RMS.</p>
+        <p class="footer__cnpj">CNPJ: 39.821.330/0001-83</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Navegação do rodapé">
+        <span>Navegação</span>
+        <a href="#top">Início</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#parceria">Parceria</a>
+        <a href="#cases">Cases</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="footer__legal">
+        <span>Institucional</span>
+        <a href="termos-de-uso.html">Termos de Uso</a>
+        <a href="politica-de-privacidade.html">Política de Privacidade</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; 2026 GEO3TECH. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ============ WHATSAPP FLOAT ============ -->
+  <a href="https://wa.me/5571981985781" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Falar no WhatsApp">
+    <span class="whatsapp-float__pulse" aria-hidden="true"></span>
+    <i data-lucide="message-circle"></i>
+  </a>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
