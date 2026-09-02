@@ -64,7 +64,7 @@
 body,
 .header,
 .card,
-.panel,
+.mac-window,
 .contact-form,
 .field input,
 .field textarea,
@@ -324,15 +324,7 @@ h1, h2, h3, h4 {
 /* Hero visual — orbit tecnológico */
 .hero__visual { position: relative; min-height: 420px; display: flex; align-items: center; justify-content: center; }
 
-.panel {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-}
-
 .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--color-ink-faint); }
-.dot--accent { background: var(--color-accent-green); }
 
 .orbit {
   position: relative;
@@ -502,35 +494,143 @@ h1, h2, h3, h4 {
 .testimonial__author span { font-size: 12.5px; color: var(--color-ink-faint); }
 
 /* ==========================================================================
-   Parceria Condfy
+   Janela estilo macOS (reutilizável)
    ========================================================================== */
-.partner__inner {
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 56px;
-  align-items: center;
-}
-.partner__badge { display: flex; justify-content: center; }
-.partner__logos {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+.mac-window {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 40px 46px;
   box-shadow: var(--shadow-md);
+  overflow: hidden;
+  width: 100%;
 }
-.partner__logo { font-family: var(--font-display); font-weight: 700; font-size: 22px; }
+.mac-window__bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 18px;
+  background: var(--color-bg-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+.mac-window__dot { width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; }
+.mac-window__dot--red { background: #FF5F57; }
+.mac-window__dot--yellow { background: #FEBC2E; }
+.mac-window__dot--green { background: #28C840; }
+.mac-window__bar-title {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-ink-faint);
+  letter-spacing: 0.03em;
+}
+.mac-window__body { padding: 26px; }
+
+/* ==========================================================================
+   Parceria — badge de logos e preview do app
+   ========================================================================== */
+.partner__logos-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: fit-content;
+  margin: 0 auto 48px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 12px 24px;
+  box-shadow: var(--shadow-sm);
+}
+.partner__inner {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 56px;
+  align-items: center;
+}
+.partner__visual { display: flex; justify-content: center; }
+.partner__visual .mac-window { max-width: 460px; }
+
+.partner__logo { font-family: var(--font-display); font-weight: 700; font-size: 17px; }
 .partner__logo--geo b { color: var(--color-primary-dark); }
-.partner__logo--condfy { color: var(--color-accent-green); text-transform: lowercase; }
-.partner__logo-img { height: 30px; width: auto; }
-.partner__plus { width: 20px; height: 20px; color: var(--color-ink-faint); flex-shrink: 0; }
+.partner__logo-img { height: 22px; width: auto; }
+.partner__plus { width: 16px; height: 16px; color: var(--color-ink-faint); flex-shrink: 0; }
+
 .partner__content h2 { font-size: clamp(1.5rem, 2.4vw, 2rem); margin-bottom: 14px; }
 .partner__content p { color: var(--color-ink-soft); margin-bottom: 22px; max-width: 520px; }
-.partner__list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
-.partner__list li { display: flex; align-items: center; gap: 10px; font-size: 14.5px; color: var(--color-ink-soft); }
-.partner__list i { width: 18px; height: 18px; color: var(--color-accent-green); flex-shrink: 0; }
+.partner__list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 8px; }
+.partner__list li { display: flex; align-items: flex-start; gap: 12px; font-size: 14.5px; color: var(--color-ink-soft); line-height: 1.5; }
+.partner__list i { width: 19px; height: 19px; color: var(--color-primary-dark); flex-shrink: 0; margin-top: 2px; }
+.partner__list strong { color: var(--color-ink); }
+.partner__note {
+  font-size: 12.5px;
+  color: var(--color-ink-faint);
+  font-style: italic;
+  margin: 14px 0 24px;
+}
+
+/* App preview (mockup do app unificado Condfy) */
+.app-preview__top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+.app-preview__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+}
+.app-preview__live {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-accent-green);
+}
+.app-preview__live-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--color-accent-green);
+  animation: liveDotPulse 1.8s infinite;
+}
+@keyframes liveDotPulse {
+  0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.55); }
+  70% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+.app-preview__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px; }
+.app-preview__tile { background: var(--color-bg-muted); border-radius: var(--radius-sm); padding: 16px; }
+.app-preview__tile-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-ink-faint);
+  margin-bottom: 6px;
+}
+.app-preview__tile-value { display: block; font-family: var(--font-display); font-weight: 700; font-size: 17px; color: var(--color-primary-dark); }
+.app-preview__tile-value--muted { color: var(--color-ink); }
+.app-preview__tile-value--accent { color: var(--color-accent-green); }
+
+.app-preview__event {
+  background: linear-gradient(120deg, var(--color-primary-dark), var(--color-primary-600));
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+  color: #fff;
+}
+.app-preview__event-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.85;
+  margin-bottom: 4px;
+}
+.app-preview__event-value { display: block; font-weight: 700; font-size: 14px; }
 
 /* ==========================================================================
    Páginas legais (Termos / Privacidade)
@@ -672,7 +772,6 @@ h1, h2, h3, h4 {
 .about { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 60px; align-items: center; }
 .about__content p { color: var(--color-ink-soft); margin-block: 16px; max-width: 520px; }
 .about__content h2 { font-size: clamp(1.6rem, 2.6vw, 2.15rem); margin-bottom: 6px; }
-.panel--about { padding: 24px; }
 .status-list li {
   display: flex; align-items: center; justify-content: space-between;
   padding: 13px 4px;
@@ -868,6 +967,7 @@ h1, h2, h3, h4 {
     justify-content: center;
   }
 
-  .partner__logos { flex-direction: column; padding: 28px; text-align: center; }
-  .partner__plus { transform: rotate(90deg); }
+  .partner__logos-badge { flex-wrap: wrap; padding: 12px 18px; }
+  .app-preview__grid { grid-template-columns: 1fr 1fr; }
+  .mac-window__body { padding: 20px; }
 }
